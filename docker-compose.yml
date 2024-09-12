@@ -5,9 +5,13 @@ services:
     image: bitnami/postgresql:13.16.0
     ports:
       - '5432:5432'
+    volumes:
+      - 'postgresql_data:/bitnami/postgresql'
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=inorbit
-    volumes:
-      - "./.data/pg:/var/lib/postgresql/data"
+
+volumes:
+  postgresql_data:
+    driver: local

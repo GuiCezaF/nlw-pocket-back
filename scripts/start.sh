@@ -5,7 +5,7 @@ docker compose pull && docker compose build && docker compose up -d
 sleep 2
 if [ $? -eq 0 ]; then
   echo -e "\nContainer iniciado com sucesso. ✅"
-  echo -e "\nMigrando dados e atualizando pacotes"
+  echo -e "\nMigrando dados e atualizando pacotes\n"
 
   pnpm install
 
