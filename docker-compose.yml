@@ -9,3 +9,5 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=inorbit
+    volumes:
+      - "./.data/pg:/var/lib/postgresql/data"
